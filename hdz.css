@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: lightgray;
+    font-family: arial;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.sidebar{
+    background: lightskyblue;
+
+    height: 100vh;
+
+/*    width: 250px;*/
+    padding: 20px;
+    overflow:hidden;
+    border-radius: 0 15px 15px 0;
+    width: 80px;
+    transition: .6s;
+}
+.sidebar:hover{
+    width: 220px;
+}
+.sidebar ul li {
+    list-style: none;
+    margin: 25px 0;
+    background: rgba(255, 255, 255, 0.212);
+    border-radius: 10px;
+    padding: 20px;
+    transition: .4s;
+    
+}
+.sidebar ul li:hover{
+    background: rgba(255, 255, 255, 0.548);
+}
+.hdzmain{
+
+
+}
+
+.main{
+
+
+    width: 90%;
+    margin: auto;
+
+    
+}
+
+.toplogo{
+
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.cards{
+
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+
+}
+.cards div{
+
+    width: 50%;
+    height: 80px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 1px 0px 4px -1px black;
+    transition: .2s;
+}
+.cards div *{
+    margin-top: 15px;
+}
+.card1{
+    background: rgb(35, 96, 228);
+}
+.card2{
+    background: rgb(48, 177, 48);
+}
+.card3{
+    background: rgb(236, 200, 37);
+}
+.card4{
+    background: rgb(240, 69, 240);
+}
+.cards div:hover{
+    box-shadow: 1px 1px 7px 1px;
+    scale: 1.02;
+}
+.bottom{
+
+    margin-top: 50px;
+    border-top: 1px solid black;
+    padding-top: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+ .searchinput{
+
+    display: flex;
+    justify-content: center;
+
+ }
+.search .searchinput input{
+    width: 75%;
+    background: transparent;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    
+
+    height: 10px;
+    padding: 10px;
+
+}
+.searchbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.searchbuttons button{
+    height: 30px;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 1px 4px 0 rgb(175, 166, 166);
+    transition: .4s;
+}
+#designationbtn{
+    background: rgba(243, 131, 4, 0.932);
+}
+#designationbtn:hover{
+    background: rgba(179, 106, 23, 0.932);   
+}
+#marquebtn{
+    background: #59dda6;
+}
+#marquebtn:hover{
+    background: #2b9b6c;
+}
+#referencebtn{
+    background: #d41f26;
+}
+#referencebtn:hover{
+    background: #80171a;
+}
+
+.creatbtn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    height: 50px;
+    border-bottom: 1px solid black;
+    gap: 20px;
+
+}
+.creatbtn button{
+    height: 30px;
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#00e5ff,#1200ff);
+    transition: .3s;
+
+}
+#selectbtn{
+    background: linear-gradient(90deg,#ffe53b,#ff2525);
+}
+.creatbtn button:hover{
+    box-shadow: 0px 0px 5px 0px black;
+    scale: 1.04;
+}
+
+.output table{
+    width: 100%;
+    margin-top: 5px;
+}
+table tbody{
+    text-align: center;
+}
+#updatebtn{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background:#00e5ff;
+    transition: .4s
+}
+.deletebtn,.excelbtn{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #ff3c43;
+    transition: .4s;
+}
+.deletebtn:hover,#updatebtn:hover,.excelbtn:hover ,.addingbtn button:hover{
+    scale: 1.03;
+    box-shadow: 1px 1px 2px 0 black;
+}
+.excelbtn{
+    background: #161b18;
+    width: 80px;
+    margin-left: 5px;
+}
+.hide{
+    display: none;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0 ,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3 ease;
+}
+.adding{
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 450px;
+    
+
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+.overlay.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.overlay.active ,.adding{
+    transform: scale(1);
+}
+.adding h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+.inputs div #designation{
+    width: 95%;
+}
+.randm{
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+
+}
+.randm input{
+    width: 100%;
+}
+.ppq{
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.ppq input{
+    width: 100%;
+}
+.inputs input{
+    padding: 10px;
+
+}
+.addingbtn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.addingbtn button{
+    padding: 7px 15px;
+    border-radius: 7px;
+    border: none;
+    border: 2px solid lightgray;
+    transition: .2s;
+}
+.nothide{
+    display: block;
+}
+.greenbtn {
+    background-color: green !important;
+    color: white !important;
+}

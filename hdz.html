@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hdz</title>
+    <link rel="stylesheet" href="hdz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+    
+<div class="sidebar">
+        <h2>hdz auto</h2>
+        
+        <ul>
+                <li><i class="fa-solid fa-house"></i> Product</li>
+                <li><i class="fa-solid fa-user"></i> Client</li>
+            </ul>
+    </div>
+
+    <div class="hdzmain">
+        <div class="main">
+            <div class="toplogo">
+            <h2>HDZ AUTO</h2>
+
+            
+        </div>
+
+        <div class="cards">
+            <div class="card1">
+                <h3>Total Product</h3>
+                <p>8</p>
+            </div>
+
+            <div class="card2">
+                <h3>Total Prix</h3>
+                <p>1000</p>
+            </div>
+
+            <div class="card3">
+                <h3>Total Prix Selling</h3>
+                <p>15000</p>
+            </div>
+
+            <div class="card4">
+                <h3>Total win</h3>
+                <p>80000</p>
+            </div>
+
+
+        </div>
+
+
+        <div class="bottom">
+            <div class="search">
+                <div class="searchinput">
+                    <input type="text" placeholder="Search" id="search" onkeyup="searchdata(this.value)">
+                </div>
+                <div class="searchbuttons">
+                    <button type="button" id="designationbtn" onclick="getsearchmood(this.id)">Search By Designation</button>
+                    <button type="button" id="marquebtn" onclick="getsearchmood(this.id)">Search By Marque</button>
+                    <button type="button" id="referencebtn" onclick="getsearchmood(this.id)">Search By Reference</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="creatbtn">
+            <button type="button" id="addbtn">Add product</button>
+            <button type="button" id="selectbtn" onclick="select()">Select Product</button>
+        </div>
+        <div id="modaloverlay" class="overlay">
+            <div class="adding">
+                <h3>Add Product </h3>
+                <div class="inputs">
+                    <div>
+                         <input type="text" placeholder="Designation" id="designation">
+                    </div>
+                   <div class="randm">
+                    <input type="number" placeholder="Reference" id="reference">
+                    <input type="text" placeholder="Marque" id="marque">
+                   </div>
+
+                   <div class="ppq">
+                    <input type="number" placeholder="price(achette)" id="price1">
+                    <input type="number" placeholder="price" id="price2">
+                    <input type="number" placeholder="Qte" id="qte">
+                   </div>
+                    
+                </div>
+
+                <div class="addingbtn">
+                    <button id="closebtn">close</button>
+                    <button id="adding">Add</button>
+                </div>
+            
+        </div>
+        </div>
+
+
+        <div class="output">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Reference</th>
+                        <th>Designation</th>
+                        <th>Marque</th>
+                        <th>prix(achette)</th>
+                        <th>Qte</th>
+                        <th>Prix U</th>
+                        <th>Total prix a</th>
+                        <th>Montant</th>
+                        <th>win puv</th>
+                        <th>win</th>
+                        <th>update</th>
+                        <th>delete</th>
+                        <th class="hide" id="excelbtnhead">Add to excel</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody">
+                  
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div style="margin-top: 15px; text-align: center;">
+    <button id="downloadExcelBtn" onclick="exportToExcel()" class="hide">تنزيل ملف Excel</button>
+</div>
+        
+
+        </div>
+        
+    </div>
+
+
+    
+    
+
+
+
+
+
+
+    <script src="hdz.js"></script>
+</body>
+</html>
